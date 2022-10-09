@@ -1,0 +1,58 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/8c5729bf07.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="hero" id="hero-el">
+                <div class="light-mode-btn-wrapper" id="light-mode-btn-wrapper-el">
+                    <p id="light-mode-btn-text-el" class="light-mode-btn-text" onclick="lightMode()" >LIGHT </p>
+                    <button class="light-mode-btn" id="light-mode-btn-el" onclick="lightMode()">
+                        <i class="fa-solid fa-toggle-on" id="light-mode-btn-icon-el"></i>
+                    </button>
+                </div>
+                <h1 class="title light-mode-title" id="hero-title">Generate a<h1>
+                <h1 class="title" id="title-bottom">random password.</h1>
+                <p class="subtitle light-mode-subtitle" id="hero-subtitle">Never use an insecure password again.</p>
+                <div class="options-wrapper">
+                    <div class="options">
+                        <input 
+                            id="password-length" 
+                            type="number" 
+                            onclick="checkPasswordLength()" 
+                            placeholder="password length [6-24]"
+                            value=15 >
+                        <div class="checkboxes" id="checkboxes-el">
+                            <label for="captials">
+                                <input type="checkbox" id="capitals" name="options" checked="true" value="yes"> Capital Letters
+                            </label>
+                            <label for="lowercase">
+                                <input type="checkbox" id="lowercase" name="options" checked="true" value="yes"> Lowercase Letters
+                            </label>
+                            <label for="numbers">
+                                <input type="checkbox" id="numbers" name="options" checked="true" value="yes"> Numbers
+                            </label>
+                            <label for="special">
+                                <input type="checkbox" id="special" name="options" checked="true" value="yes"> Special Characters
+                            </label>
+                        </div>
+                    </div>
+                    <button class="generate-btn" onclick="handleClick()">Generate passwords</button>
+                </div>
+                
+            </div>
+            <div class="btn-wrapper">
+                <button class="password-btn" id="password-one" onclick="copyToClipboard(true)" ></button>
+                <button class="password-btn" id="password-two" onclick="copyToClipboard(false)" ></button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+ 
+ 
