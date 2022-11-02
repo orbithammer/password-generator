@@ -22,14 +22,21 @@ const capitalsEl = document.getElementById("capitals")
 const lowercaseEl = document.getElementById("lowercase")
 const numbersEl = document.getElementById("numbers")
 const specialEl = document.getElementById("special")
+const errorMessageEl = document.getElementById("error-message-el")
 let isLightMode = false
+document.getElementById("lowercase").required = true
 
 function handleClick() {
-    passwordOne = generatePassword()
-    passwordTwo = generatePassword()
-    // console.log("pwOne", passwordOne, "pwTwo", passwordTwo)
-    passwordOneEl.textContent = passwordOne
-    passwordTwoEl.textContent = passwordTwo
+    if (document.querySelector("input[type='checkbox']:checked")) {
+        passwordOne = generatePassword()
+        passwordTwo = generatePassword()
+        // console.log("pwOne", passwordOne, "pwTwo", passwordTwo)
+        passwordOneEl.textContent = passwordOne
+        passwordTwoEl.textContent = passwordTwo
+        errorMessageEl.textContent = " "
+    } else {
+        errorMessageEl.innerHTML = "Check at least one box."
+    }
 }
 
 function generatePassword() {

@@ -23,16 +23,20 @@
                         <input 
                             id="password-length" 
                             type="number" 
-                            onclick="checkPasswordLength()" 
+                            onclick="checkPasswordLength()"
                             placeholder="password length [6-24]"
-                            value=15 >
+                            value=15 
+                            min="6"
+                            max="24"
+                            >
                         <div class="checkboxes" id="checkboxes-el">
-                            <label for="captials">
+                            <label for="lowercase">
+                                <input type="checkbox" id="lowercase" name="options" checked="true" value="yes" required> Lowercase Letters
+                            </label>
+                            <label for="capitals">
                                 <input type="checkbox" id="capitals" name="options" checked="true" value="yes"> Capital Letters
                             </label>
-                            <label for="lowercase">
-                                <input type="checkbox" id="lowercase" name="options" checked="true" value="yes"> Lowercase Letters
-                            </label>
+                            
                             <label for="numbers">
                                 <input type="checkbox" id="numbers" name="options" checked="true" value="yes"> Numbers
                             </label>
@@ -41,7 +45,10 @@
                             </label>
                         </div>
                     </div>
-                    <button class="generate-btn" onclick="handleClick()">Generate passwords</button>
+                    <div class="btn-error-wrapper">
+                        <button class="generate-btn" onclick="handleClick()">Generate passwords</button>
+                        <p class="error-message" id="error-message-el"> </p>
+                    </div>
                 </div>
                 
             </div>

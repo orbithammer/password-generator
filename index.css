@@ -67,7 +67,7 @@ body {
     padding: 10px 15px;
     color: white;
     height: 42px;
-    margin: auto;
+    margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
 
@@ -89,6 +89,15 @@ body {
     flex-direction: column;
     color: white;
     margin-top: 10px;     
+}
+
+.btn-error-wrapper {
+    margin: auto;
+}
+
+.error-message {
+    color: red;
+    position: fixed;
 }
 
 .btn-wrapper {
